@@ -303,10 +303,22 @@
         <button class="filter-btn" data-filter="fenster">Fenster</button>
         <button class="filter-btn" data-filter="team">Team</button>
         <button class="filter-btn" data-filter="showroom">Showroom</button>
+        <button class="filter-btn" data-filter="vorher-nachher">Vorher / Nachher</button>
     </div>
 
     <!-- Gallery -->
     <div class="gallery-grid" id="gallery">
+
+        <!-- Vorher / Nachher -->
+        <div class="gallery-item" data-cat="vorher-nachher" onclick="openLightbox(this)">
+            <img src="vorher.jpg" alt="Vorher – Alte Tür vor der Montage">
+            <div class="overlay"><span class="overlay-label" style="background:rgba(180,60,60,0.88);">Vorher</span></div>
+        </div>
+
+        <div class="gallery-item" data-cat="vorher-nachher" onclick="openLightbox(this)">
+            <img src="nachher.jpg" alt="Nachher – Neue Tür nach der Montage">
+            <div class="overlay"><span class="overlay-label" style="background:rgba(30,140,80,0.88);">Nachher</span></div>
+        </div>
 
         <!-- Team -->
         <div class="gallery-item" data-cat="team" onclick="openLightbox(this)" style="height:320px;">
