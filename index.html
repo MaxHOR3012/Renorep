@@ -21,14 +21,14 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; overflow-x: hidden; }
+        html { scroll-behavior: smooth; overflow-x: clip; }
 
         body {
             font-family: 'Nunito', sans-serif;
             background: var(--white);
             color: var(--gray-900);
             line-height: 1.6;
-            overflow-x: hidden;
+            overflow-x: clip;
         }
 
         /* ── NAV ── */
@@ -609,6 +609,21 @@
         /* About image */
         .about-img-ph { min-height: 280px; margin-bottom: 2rem; }
 
+        @media (max-width: 1024px) {
+            .about-hero-img {
+                margin-left: -2rem;
+                margin-right: -2rem;
+                width: calc(100% + 4rem) !important;
+                border-radius: 0 !important;
+                max-height: 420px !important;
+            }
+        }
+        @media (max-width: 640px) {
+            .about-hero-img {
+                max-height: 340px !important;
+            }
+        }
+
         /* Contact image */
         .contact-img-ph { min-height: 180px; margin-top: 1.5rem; }
 
@@ -776,7 +791,7 @@
 <section class="section" id="ueber-uns">
     <div class="about-inner">
         <div>
-            <img src="Gemini_Generated_Image_mchet7mchet7mche.png" alt="Renorep Team" style="width:100%;border-radius:12px;object-fit:cover;object-position:50% 20%;background:var(--gray-50);max-height:580px;display:block;margin-bottom:2rem;">
+            <img src="Gemini_Generated_Image_mchet7mchet7mche.png" alt="Renorep Team" class="about-hero-img" style="width:100%;border-radius:12px;object-fit:cover;object-position:50% 20%;background:var(--gray-50);max-height:580px;display:block;margin-bottom:2rem;">
             <div class="sec-label">Über uns</div>
             <h2 class="sec-title">Handwerk mit Herzblut</h2>
             <p class="about-text">
